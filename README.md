@@ -1,1 +1,6 @@
-Initial fork from ![angular2-laravel5](https://github.com/axiskafi/angular2-laravel5)
+# Setup
+
+1. composer update
+2. npm install
+3. gulp bower --force-latest
+4. gulp
