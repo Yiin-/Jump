@@ -1,5 +1,6 @@
 import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, LocationStrategy, Location, HashLocationStrategy } from 'angular2/router';
+import {provide} from 'angular2/core';
 
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { HeroesComponent } from '../heroes/heroes/heroes.component';
@@ -8,18 +9,12 @@ import { HeroService } from '../heroes/hero/hero.service';
 
 @Component({
   selector: 'my-app',
-  template: `
-    <h1>{{title}}</h1>
-    <nav>
-      <a [routerLink]="['Dashboard']">Dashboard</a>
-      <a [routerLink]="['Heroes']">Heroes</a>
-    </nav>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: 'app/app/app.component.html',
   styleUrls: ['app/app/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
+    provide(LocationStrategy, { useClass: HashLocationStrategy }),
     HeroService
   ]
 })
@@ -42,5 +37,5 @@ import { HeroService } from '../heroes/hero/hero.service';
   }
 ])
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'Pasirinkite žmonių skaičių';
 }

@@ -9,8 +9,14 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
-*/
+ */
 
-Route::get('/', function () {
+Route::get('{url}', function () {
     return view('welcome');
+})->where('url', '(?=.*)((?!crud).)*');
+
+Route::group(['prefix' => 'crud'], function () {
+    Route::resource('time', 'TimeController');
+    Route::resource('reservation', 'ReservationController');
+    Route::resource('payment', 'PaymentController');
 });
