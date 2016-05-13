@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jump</title>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        {{-- <link href='http://fonts.googleapis.com/css?family=Lora:100,300,400' rel='stylesheet' type='text/css'> --}}
 
         <style>
             html, body {
@@ -16,13 +19,12 @@
                 width: 100%;
                 display: table;
                 font-weight: 300;
-                font-family: 'Open Sans';
+                font-family: Ubuntu, 'Open Sans';
             }
 
             .container {
+                margin-top: 20px;
                 text-align: center;
-                display: table-cell;
-                vertical-align: middle;
             }
 
             .content {
@@ -30,8 +32,15 @@
                 display: inline-block;
             }
 
+            .header {
+                text-align: center;
+                width: 100%;
+            }
+
             .title {
-                font-size: 96px;
+                font-size: 50px;
+                font-weight: 600;
+                font-family: Ubuntu, 'Source Sans Pro';
             }
         </style>
         <base href="./">
@@ -67,6 +76,9 @@
     </script>
     </head>
     <body>
+        <div class="header">
+            <h1 class="title">Šuolių parašiutu rezervacijų sistema</h1>
+        </div>
         <div class="container">
             <div class="content">
                 <my-app>Loading...</my-app>

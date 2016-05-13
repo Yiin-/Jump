@@ -37,5 +37,5 @@ import { HeroService } from '../heroes/hero/hero.service';
   }
 ])
 export class AppComponent {
-  title = 'Pasirinkite žmonių skaičių';
+  subTitle = 'Pasirinkite žmonių skaičių';
 }
