@@ -5,7 +5,7 @@
         <title>Jump</title>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Ubuntu:600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         {{-- <link href='http://fonts.googleapis.com/css?family=Lora:100,300,400' rel='stylesheet' type='text/css'> --}}
 
         <style>
@@ -23,7 +23,7 @@
             }
 
             .container {
-                margin-top: 20px;
+                margin-top: 100px;
                 text-align: center;
             }
 

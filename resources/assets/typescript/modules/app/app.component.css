@@ -51,7 +51,8 @@ textarea.question {
   border-radius: 2px;
   margin: 0;
   border: none;
-  width: 80%;
+  width: 100%;
+  padding: 0 15px;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
@@ -162,4 +163,20 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   100% {
     opacity: 1;
   }
+}
+
+.btn {
+    color: black !important;
+    text-decoration: none;
+    font-family: Ubuntu;
+    padding: 20px;
+    border: 1px solid black;
+    display: block;
+    width: 250px;
+    margin: 20px auto;
+}
+
+.btn:hover {
+    color: red;
+    border-color: #8F8F8F;
 }
