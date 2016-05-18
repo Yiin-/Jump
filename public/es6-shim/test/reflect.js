@@ -189,8 +189,7 @@ describe('Reflect', function () {
     });
 
     it('can return true, even for non-configurable, non-writable properties', function () {
-      var o = {};
-      var desc = {
+      var o = {}, desc = {
         value: 13,
         enumerable: false,
         writable: false,

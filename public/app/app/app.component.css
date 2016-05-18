@@ -2,25 +2,6 @@ html {
   width: 100%;
 }
 
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
-}
-nav a:visited, a:link {
-  color: #607D8B;
-}
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
-nav a.router-link-active {
-  color: #039be5;
-}
-
 h1 {
   font-size: 64px;
   font-weight: 100;
@@ -67,7 +48,7 @@ textarea.question + label {
   padding: 0;
   margin: 0;
   width: 10%;
-  border-top: 1px solid red;
+  border-top: 1px solid #009FFF;
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
   height: 0px;
@@ -104,7 +85,8 @@ textarea.question:valid + label > span {
 
 input.question:valid + label,
 textarea.question:valid + label {
-  border-color: green;
+  border-color: #009FFF;
+  border-width: 2px;
 }
 
 input.question:invalid,
@@ -166,7 +148,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 }
 
 .btn {
-    color: black !important;
+    color: black;
     text-decoration: none;
     font-family: Ubuntu;
     padding: 20px;
@@ -177,6 +159,5 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 }
 
 .btn:hover {
-    color: red;
-    border-color: #8F8F8F;
+    border-color: #009FFF;
 }

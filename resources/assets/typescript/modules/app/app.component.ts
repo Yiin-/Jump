@@ -1,28 +1,27 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, LocationStrategy, Location, HashLocationStrategy } from 'angular2/router';
-import {provide} from 'angular2/core';
+import { Component, OnInit, provide } from 'angular2/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, LocationStrategy, Location, HashLocationStrategy, Router } from 'angular2/router';
 
-import { DashboardComponent } from '../dashboard/dashboard.component';
+import { ParticipantsComponent } from '../participants/participants.component';
+// import { TimeComponent } from '../time/time.component';
+
 import { HeroesComponent } from '../heroes/heroes/heroes.component';
 import { HeroDetailComponent } from '../heroes/hero-detail/hero-detail.component';
 import { HeroService } from '../heroes/hero/hero.service';
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/app/app.component.html',
-  styleUrls: ['app/app/app.component.css'],
+  template: `<router-outlet></router-outlet>`,
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    provide(LocationStrategy, { useClass: HashLocationStrategy }),
-    HeroService
+    provide(LocationStrategy, { useClass: HashLocationStrategy })
   ]
 })
 @RouteConfig([
   {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: DashboardComponent,
+    path: '/participants',
+    name: 'Participants',
+    component: ParticipantsComponent,
     useAsDefault: true
   },
   {
@@ -36,6 +35,10 @@ import { HeroService } from '../heroes/hero/hero.service';
     component: HeroesComponent
   }
 ])
-export class AppComponent {
-  subTitle = 'Pasirinkite žmonių skaičių';
+export class AppComponent implements OnInit {
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+      this.router.navigate(['Participants']);
+  }
 }

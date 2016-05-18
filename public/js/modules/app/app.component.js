@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', '../dashboard/dashboard.component', '../heroes/heroes/heroes.component', '../heroes/hero-detail/hero-detail.component', '../heroes/hero/hero.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../participants/participants.component', '../heroes/heroes/heroes.component', '../heroes/hero-detail/hero-detail.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,51 +10,48 @@ System.register(['angular2/core', 'angular2/router', '../dashboard/dashboard.com
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, core_2, dashboard_component_1, heroes_component_1, hero_detail_component_1, hero_service_1;
+    var core_1, router_1, participants_component_1, heroes_component_1, hero_detail_component_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-                core_2 = core_1_1;
             },
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (dashboard_component_1_1) {
-                dashboard_component_1 = dashboard_component_1_1;
+            function (participants_component_1_1) {
+                participants_component_1 = participants_component_1_1;
             },
             function (heroes_component_1_1) {
                 heroes_component_1 = heroes_component_1_1;
             },
             function (hero_detail_component_1_1) {
                 hero_detail_component_1 = hero_detail_component_1_1;
-            },
-            function (hero_service_1_1) {
-                hero_service_1 = hero_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
-                    this.subTitle = 'Pasirinkite žmonių skaičių';
+                function AppComponent(router) {
+                    this.router = router;
                 }
+                AppComponent.prototype.ngOnInit = function () {
+                    this.router.navigate(['Participants']);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        templateUrl: 'app/app/app.component.html',
-                        styleUrls: ['app/app/app.component.css'],
+                        template: "<router-outlet></router-outlet>",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [
                             router_1.ROUTER_PROVIDERS,
-                            core_2.provide(router_1.LocationStrategy, { useClass: router_1.HashLocationStrategy }),
-                            hero_service_1.HeroService
+                            core_1.provide(router_1.LocationStrategy, { useClass: router_1.HashLocationStrategy })
                         ]
                     }),
                     router_1.RouteConfig([
                         {
-                            path: '/dashboard',
-                            name: 'Dashboard',
-                            component: dashboard_component_1.DashboardComponent,
+                            path: '/participants',
+                            name: 'Participants',
+                            component: participants_component_1.ParticipantsComponent,
                             useAsDefault: true
                         },
                         {
@@ -68,7 +65,7 @@ System.register(['angular2/core', 'angular2/router', '../dashboard/dashboard.com
                             component: heroes_component_1.HeroesComponent
                         }
                     ]), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [router_1.Router])
                 ], AppComponent);
                 return AppComponent;
             }());

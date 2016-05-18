@@ -1,4 +1,4 @@
-/* global describe, it, expect, require */
+/* global describe, it, xit, expect, require, beforeEach, afterEach */
 
 describe('Function', function () {
   describe('#name', function () {

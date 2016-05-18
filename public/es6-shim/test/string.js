@@ -60,9 +60,7 @@ var runStringTests = function (it) {
         expect('test'.repeat(NaN)).to.eql('');
         expect('test'.repeat({})).to.eql('');
         expect('test'.repeat([])).to.eql('');
-        expect('test'.repeat({
-          valueOf: function () { return 2; }
-        })).to.eql('testtest');
+        expect('test'.repeat({ valueOf: function () { return 2; } })).to.eql('testtest');
       });
       it('should work', function () {
         expect('test'.repeat(3)).to.eql('testtesttest');
@@ -149,8 +147,7 @@ var runStringTests = function (it) {
         expect(myobj.startsWith('abc')).to.equal(true);
         expect(myobj.startsWith('bc')).to.equal(false);
 
-        var gotStr = false;
-        var gotPos = false;
+        var gotStr = false, gotPos = false;
 
         myobj = {
           toString: function () {
@@ -188,9 +185,9 @@ var runStringTests = function (it) {
 
       ifSymbolsDescribe('Symbol.match', function () {
         if (!hasSymbols || !Symbol.match) {
-          return it('exists', function () {
-            expect(Symbol).to.have.property('match');
-          });
+            return it('exists', function () {
+                expect(Symbol).to.have.property('match');
+            });
         }
 
         it('allows a regex with Symbol.match set to a falsy value', function () {
@@ -265,8 +262,7 @@ var runStringTests = function (it) {
         };
         expect(myobj.endsWith('abc')).to.equal(true);
         expect(myobj.endsWith('ab')).to.equal(false);
-        var gotStr = false;
-        var gotPos = false;
+        var gotStr = false, gotPos = false;
 
         myobj = {
           toString: function () {
@@ -314,9 +310,9 @@ var runStringTests = function (it) {
 
       ifSymbolsDescribe('Symbol.match', function () {
         if (!hasSymbols || !Symbol.match) {
-          return it('exists', function () {
-            expect(Symbol).to.have.property('match');
-          });
+            return it('exists', function () {
+                expect(Symbol).to.have.property('match');
+            });
         }
 
         it('allows a regex with Symbol.match set to a falsy value', function () {
@@ -386,8 +382,7 @@ var runStringTests = function (it) {
         expect(myobj.includes('abc')).to.equal(true);
         expect(myobj.includes('cd')).to.equal(false);
 
-        var gotStr = false;
-        var gotPos = false;
+        var gotStr = false, gotPos = false;
 
         myobj = {
           toString: function () {
@@ -429,9 +424,9 @@ var runStringTests = function (it) {
 
       ifSymbolsDescribe('Symbol.match', function () {
         if (!hasSymbols || !Symbol.match) {
-          return it('exists', function () {
-            expect(Symbol).to.have.property('match');
-          });
+            return it('exists', function () {
+                expect(Symbol).to.have.property('match');
+            });
         }
 
         it('allows a regex with Symbol.match set to a falsy value', function () {

@@ -3,9 +3,7 @@
 var failIfThrows = function (done) {
   'use strict';
 
-  return function (e) {
-    done(e || new Error());
-  };
+  return function (e) { done(e || new Error()); };
 };
 
 var delayPromise = function (value, ms) {
