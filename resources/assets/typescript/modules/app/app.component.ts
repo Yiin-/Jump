@@ -2,7 +2,7 @@ import { Component, OnInit, provide } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, LocationStrategy, Location, HashLocationStrategy, Router } from 'angular2/router';
 
 import { ParticipantsComponent } from '../participants/participants.component';
-// import { TimeComponent } from '../time/time.component';
+import { TimeComponent } from '../time/time.component';
 
 import { HeroesComponent } from '../heroes/heroes/heroes.component';
 import { HeroDetailComponent } from '../heroes/hero-detail/hero-detail.component';
@@ -23,6 +23,11 @@ import { HeroService } from '../heroes/hero/hero.service';
     name: 'Participants',
     component: ParticipantsComponent,
     useAsDefault: true
+  },
+  {
+    path: '/time',
+    name: 'Time',
+    component: TimeComponent
   },
   {
     path: '/detail/:id',

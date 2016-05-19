@@ -3,7 +3,7 @@ var bower = require("gulp-bower");
 var elixir = require("laravel-elixir");
 var elixirTypscript = require('elixir-typescript');
 
-gulp.task('bower', function () {
+gulp.task('bower', function() {
     return bower();
 });
 
@@ -16,11 +16,11 @@ var paths = {
     'bootstrap': vendors + 'bootstrap/dist',
     'fontawesome': vendors + 'font-awesome',
     'eonasdanBootstrapDatetimepicker': vendors + 'eonasdan-bootstrap-datetimepicker/build',
-    'tether' : vendors + 'tether/dist'
+    'tether': vendors + 'tether/dist'
 };
 
 
-elixir(function (mix) {
+elixir(function(mix) {
     mix.copy('node_modules/angular2', 'public/angular2');
     mix.copy('node_modules/rxjs', 'public/rxjs');
     mix.copy('node_modules/systemjs', 'public/systemjs');
@@ -40,7 +40,8 @@ elixir(function (mix) {
     mix.styles([paths.fontawesome + "/css/font-awesome.min.css",
         paths.jqueryUi + "/themes/base/core.css",
         paths.tether + '/css/tether.css',
-        paths.eonasdanBootstrapDatetimepicker + '/css/bootstrap-datetimepicker.css'
+        paths.eonasdanBootstrapDatetimepicker + '/css/bootstrap-datetimepicker.css',
+        vendors + 'calendar.css',
     ], 'public/css/styles.css');
 
     mix.copy('resources/assets/typescript/modules/**/*.css', 'public/app');
@@ -52,14 +53,14 @@ elixir(function (mix) {
         paths.tether + '/js/tether.js',
         paths.bootstrap + "/js/bootstrap.min.js",
         paths.moment + '/moment.js',
-        paths.eonasdanBootstrapDatetimepicker + '/js/bootstrap-datetimepicker.min.js'
+        paths.eonasdanBootstrapDatetimepicker + '/js/bootstrap-datetimepicker.min.js',
+        vendors + 'calendar.js'
     ], 'public/js/scripts.js');
 
 
     mix.typescript(
         '/**/*.ts',
-        'public/js',
-        {
+        'public/js', {
             "target": "es5",
             "module": "system",
             "moduleResolution": "node",

@@ -11,7 +11,7 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, router_1;
-    var ParticipantsComponent;
+    var TimeComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,26 +21,28 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
                 router_1 = router_1_1;
             }],
         execute: function() {
-            ParticipantsComponent = (function () {
-                function ParticipantsComponent(_router) {
+            TimeComponent = (function () {
+                function TimeComponent(_router) {
                     this._router = _router;
                     this.subTitle = 'Pasirinkite norimą laiką';
                 }
-                ParticipantsComponent.prototype.gotoTime = function () {
+                TimeComponent.prototype.ngOnInit = function () {
+                    new Calendar('#calendar');
+                };
+                TimeComponent.prototype.gotoTime = function () {
                     this._router.navigate(['time', {}]);
                 };
-                ParticipantsComponent = __decorate([
+                TimeComponent = __decorate([
                     core_1.Component({
                         selector: 'Time',
                         templateUrl: 'app/time/time.component.html',
-                        styleUrls: ['app/time/time.component.css'],
                         directives: [router_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [router_1.Router])
-                ], ParticipantsComponent);
-                return ParticipantsComponent;
+                ], TimeComponent);
+                return TimeComponent;
             }());
-            exports_1("ParticipantsComponent", ParticipantsComponent);
+            exports_1("TimeComponent", TimeComponent);
         }
     }
 });

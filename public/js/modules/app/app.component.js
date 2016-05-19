@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', '../participants/participants.component', '../heroes/heroes/heroes.component', '../heroes/hero-detail/hero-detail.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../participants/participants.component', '../time/time.component', '../heroes/heroes/heroes.component', '../heroes/hero-detail/hero-detail.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', '../participants/participan
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, participants_component_1, heroes_component_1, hero_detail_component_1;
+    var core_1, router_1, participants_component_1, time_component_1, heroes_component_1, hero_detail_component_1;
     var AppComponent;
     return {
         setters:[
@@ -22,6 +22,9 @@ System.register(['angular2/core', 'angular2/router', '../participants/participan
             },
             function (participants_component_1_1) {
                 participants_component_1 = participants_component_1_1;
+            },
+            function (time_component_1_1) {
+                time_component_1 = time_component_1_1;
             },
             function (heroes_component_1_1) {
                 heroes_component_1 = heroes_component_1_1;
@@ -53,6 +56,11 @@ System.register(['angular2/core', 'angular2/router', '../participants/participan
                             name: 'Participants',
                             component: participants_component_1.ParticipantsComponent,
                             useAsDefault: true
+                        },
+                        {
+                            path: '/time',
+                            name: 'Time',
+                            component: time_component_1.TimeComponent
                         },
                         {
                             path: '/detail/:id',
