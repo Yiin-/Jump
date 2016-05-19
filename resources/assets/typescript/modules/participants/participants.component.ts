@@ -3,8 +3,8 @@ import { Router, ROUTER_DIRECTIVES } from 'angular2/router';
 
 @Component({
   selector: 'Participants',
-  templateUrl: 'app/app/app.component.html',
-  styleUrls: ['app/app/app.component.css'],
+  templateUrl: 'app/participants/participants.component.html',
+  styleUrls: ['app/participants/participants.component.css'],
   directives: [ROUTER_DIRECTIVES]
   // templateUrl: 'app/participants/participants.component.html',
   // styleUrls: ['app/participants/participants.component.css']

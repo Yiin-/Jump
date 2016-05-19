@@ -6,6 +6,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100' rel='stylesheet' type='text/css'>
         {{-- <link href='http://fonts.googleapis.com/css?family=Lora:100,300,400' rel='stylesheet' type='text/css'> --}}
 
         <style>
@@ -20,6 +21,7 @@
                 display: table;
                 font-weight: 300;
                 font-family: Ubuntu, 'Open Sans';
+                background: linear-gradient(to bottom right, whitesmoke, #E4E4E4);
             }
 
             .container {
@@ -41,7 +43,8 @@
                 font-size: 50px;
                 font-weight: 600;
                 font-family: Ubuntu, 'Source Sans Pro';
-                text-shadow: 2px 3px 0px rgb(143, 143, 143);
+                /*text-shadow: 2px 3px 0px rgb(143, 143, 143);*/
+                text-shadow: 0 0 2px #8F8F8F;
             }
 
             .loader{
@@ -114,5 +117,6 @@
                 </my-app>
             </div>
         </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
     </body>
 </html>

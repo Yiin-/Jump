@@ -32,8 +32,8 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
                 ParticipantsComponent = __decorate([
                     core_1.Component({
                         selector: 'Participants',
-                        templateUrl: 'app/app/app.component.html',
-                        styleUrls: ['app/app/app.component.css'],
+                        templateUrl: 'app/participants/participants.component.html',
+                        styleUrls: ['app/participants/participants.component.css'],
                         directives: [router_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [router_1.Router])
